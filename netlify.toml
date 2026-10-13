@@ -1,0 +1,3 @@
+[build]
+  command = "unzip -o *.zip -d public"
+  publish = "public"
