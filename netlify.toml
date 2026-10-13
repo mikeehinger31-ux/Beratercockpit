@@ -1,3 +1,3 @@
 [build]
-  command = "rm -rf public && mkdir public && unzip -o deploy.zip -d public"
-  publish = "public"
+  publish = "."
+  command = "echo Kein Build noetig"
