@@ -1,3 +1,3 @@
 [build]
-  command = "unzip -o *.zip -d public && if [ $(ls -1 public | wc -l) -eq 1 ] && [ -d public/$(ls -1 public) ]; then mv public/$(ls -1 public)/* public/ && rmdir public/$(ls -1 public); fi"
+  command = "rm -rf public && mkdir public && unzip -o \"$(ls -t *.zip | head -n 1)\" -d public && if [ $(ls -1 public | wc -l) -eq 1 ] && [ -d public/$(ls -1 public) ]; then mv public/$(ls -1 public)/* public/ && rmdir public/$(ls -1 public); fi"
   publish = "public"
